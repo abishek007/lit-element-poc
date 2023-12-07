@@ -1,6 +1,6 @@
 {
   "name": "lit-element-poc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Lit Element",
   "module": "dist/bundle.esm.min.js",
@@ -13,7 +13,7 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/happyfoxinc/hf-editor.git"
+    "url": "https://github.com/abishek007/lit-element-poc.git"
   },
   "author": "",
   "license": "ISC",
@@ -35,6 +35,8 @@
     "rollup-plugin-styles": "^4.0.0"
   },
   "dependencies": {
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
     "dompurify": "^3.0.5",
     "lit": "^3.1.0",
     "lodash": "^4.17.21",
@@ -43,8 +45,5 @@
     "rollup-plugin-replace": "^2.2.0",
     "tippy.js": "^6.3.7",
     "vanilla-picker": "^2.12.2"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }

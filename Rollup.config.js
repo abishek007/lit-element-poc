@@ -28,13 +28,17 @@ export default {
     }),
     babel({
       babelHelpers: 'runtime',
-      presets: ['@babel/preset-env'],
+      presets: [['@babel/preset-env', {
+        targets: '> 0.25%, not dead' // adjust this to your needs
+      }]],
       plugins: [
         ['@babel/plugin-proposal-decorators', { 'legacy': true }],
-        ["@babel/plugin-proposal-class-properties", { "loose": true }],
-        '@babel/plugin-transform-runtime'
+        ["@babel/plugin-proposal-class-properties", { "legacy": true }],
+        ['@babel/plugin-proposal-optional-chaining', { 'legacy': true }],
+        ['@babel/plugin-proposal-nullish-coalescing-operator', { 'legacy': true }],
+        ['@babel/plugin-transform-runtime', { useESModules: false }]
       ],
-      exclude: 'node_modules/**',
+      exclude: /node_modules\/(?!(lit-html|lit-element|lit|@lit))/, // don't exclude lit-html, lit-element, lit, @lit
     }),
     nodeResolve(),
     commonjs(),
