@@ -29,7 +29,7 @@ export default {
     babel({
       babelHelpers: 'runtime',
       presets: [['@babel/preset-env', {
-        targets: '> 0.25%, not dead' // adjust this to your needs
+        targets: '> 0.10%, not dead' // adjust this to your needs
       }]],
       plugins: [
         ['@babel/plugin-proposal-decorators', { 'legacy': true }],
