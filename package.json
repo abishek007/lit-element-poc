@@ -1,6 +1,6 @@
 {
   "name": "lit-element-poc",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "description": "Lit Element",
   "module": "dist/bundle.esm.min.js",
